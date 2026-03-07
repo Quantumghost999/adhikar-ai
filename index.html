@@ -14,23 +14,25 @@
 </head>
 <body class="bg-slate-950 text-white">
 
+  <!-- Navbar -->
   <nav class="sticky top-0 bg-slate-900 border-b border-slate-700 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <i class="fa-solid fa-scale-balanced text-3xl text-orange-500"></i>
-        <h1 class="text-2xl font-bold">Adhikar AI</h1>
+        <h1 id="navTitle" class="text-2xl font-bold">Adhikar AI</h1>
       </div>
-      <div class="hidden md:flex gap-8 text-lg">
-        <a href="#home" class="hover:text-orange-400 transition">Home</a>
-        <a href="#about" class="hover:text-orange-400 transition">About</a>
-        <a href="#features" class="hover:text-orange-400 transition">Features</a>
-        <a href="#demo" class="hover:text-orange-400 transition">Try AI</a>
-        <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+      <div class="flex items-center gap-6">
+        <select id="langSelect" onchange="changeLanguage()" class="bg-slate-800 text-white px-4 py-2 rounded-xl text-sm">
+          <option value="hi">हिंदी</option>
+          <option value="en">English</option>
+          <option value="od">ଓଡ଼ିଆ</option>
+        </select>
+        <a href="#" onclick="alert('App coming soon on Play Store!')" class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold">Install App</a>
       </div>
-      <a href="#" onclick="alert('App coming soon on Play Store!')" class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold">Install App</a>
     </div>
   </nav>
 
+  <!-- Hero -->
   <section id="home" class="hero-bg py-24 text-center">
     <div class="max-w-5xl mx-auto px-6">
       <h2 id="mainTitle" class="text-5xl md:text-6xl font-bold leading-tight">Adhikar AI - India's AI Rights Guardian</h2>
@@ -48,21 +50,22 @@
     </div>
   </section>
 
+  <!-- About -->
   <section id="about" class="py-20 bg-slate-900">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Hamara Mission</h2>
+      <h2 id="aboutTitle" class="text-4xl font-bold text-center mb-12">Hamara Mission</h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-lg leading-relaxed">Adhikar AI Bharat ke har nagrik ke liye bana hai. Leading human rights defenders ke saath milkar yeh tool ready kiya gaya.</p>
-          <p class="mt-6 text-lg leading-relaxed">Inspired by <span class="font-bold text-orange-400">Shri Manoj Jena</span> (Chairperson, Human Rights Front HRF India & NHRC Core Group Member)</p>
+          <p id="aboutText1" class="text-lg leading-relaxed">Adhikar AI Bharat ke har nagrik ke liye bana hai. Leading human rights defenders ke saath milkar yeh tool ready kiya gaya.</p>
+          <p id="aboutText2" class="mt-6 text-lg leading-relaxed">Inspired by <span class="font-bold text-orange-400">Shri Manoj Jena</span> (Chairperson, Human Rights Front HRF India & NHRC Core Group Member)</p>
         </div>
         <div class="bg-slate-800 p-8 rounded-2xl text-center">
-          <img src="https://i.ibb.co/0jZfK9k/manoj-jena.jpg" alt="Shri Manoj Jena" class="w-64 mx-auto rounded-2xl shadow-xl border-4 border-orange-500">
+          <img src="https://i.ibb.co/5Y7vK8Q/manoj-jena-official.jpg" alt="Shri Manoj Jena" class="w-64 mx-auto rounded-2xl shadow-xl border-4 border-orange-500">
           <p class="mt-4 font-bold text-orange-400">Shri Manoj Jena</p>
           <p class="text-sm text-slate-400">Chairperson, Human Rights Front (HRF) India</p>
         </div>
         <div class="bg-slate-800 p-8 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-6">Founder & CEO</h3>
+          <h3 id="ceoTitle" class="text-2xl font-semibold mb-6">Founder & CEO</h3>
           <p class="text-3xl font-bold text-orange-400">Mr. Nrusingha Charan Panda</p>
           <p class="mt-2 text-slate-300">QuantumGhost Pvt Ltd</p>
         </div>
@@ -70,34 +73,37 @@
     </div>
   </section>
 
+  <!-- Features -->
   <section id="features" class="py-20 bg-slate-950">
     <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-12">Powerful Features</h2>
+      <h2 id="featuresTitle" class="text-4xl font-bold mb-12">Powerful Features</h2>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-900 p-8 rounded-3xl">Instant Petition Draft</div>
-        <div class="bg-slate-900 p-8 rounded-3xl">Smart Gemini AI Chatbot</div>
-        <div class="bg-slate-900 p-8 rounded-3xl">Auto NHRC Follow-up</div>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-700">Instant Petition Draft</div>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-700">Smart Gemini AI Chatbot</div>
+        <div class="bg-slate-900 p-8 rounded-3xl border border-slate-700">Auto NHRC Follow-up</div>
       </div>
     </div>
   </section>
 
+  <!-- Demo -->
   <section id="demo" class="py-20 bg-slate-900">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-4">Real Gemini AI Try Karo!</h2>
+      <h2 id="demoTitle" class="text-4xl font-bold mb-4">Real Gemini AI Try Karo!</h2>
       <p id="demoState" class="text-orange-400 text-xl mb-6">Selected for: Odisha</p>
       <div class="bg-slate-950 border border-slate-700 rounded-3xl p-6 shadow-2xl">
         <div id="chat" class="chat-box bg-slate-900 p-6 rounded-2xl text-left mb-6"></div>
         <div class="flex gap-3">
-          <input id="userInput" type="text" placeholder="Apni problem batao..." class="flex-1 bg-slate-800 text-white px-6 py-4 rounded-2xl">
+          <input id="userInput" type="text" placeholder="Apni problem batao..." class="flex-1 bg-slate-800 text-white px-6 py-4 rounded-2xl focus:outline-none">
           <button onclick="sendMessage()" class="bg-orange-500 hover:bg-orange-600 px-10 py-4 rounded-2xl font-bold">Bhejo</button>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="py-20 bg-slate-950">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Humse Baat Karo</h2>
+      <h2 id="contactTitle" class="text-4xl font-bold text-center mb-12">Humse Baat Karo</h2>
       <form action="https://formspree.io/f/your-email" method="POST" class="space-y-6">
         <input type="text" name="name" placeholder="Naam" required class="w-full bg-slate-900 border border-slate-700 px-6 py-4 rounded-2xl">
         <input type="email" name="email" placeholder="Email ya Phone" required class="w-full bg-slate-900 border border-slate-700 px-6 py-4 rounded-2xl">
@@ -107,18 +113,40 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-black py-8 text-center text-slate-500">
     <p>Made with ❤️ for Bharat • Founder & CEO: Mr. Nrusingha Charan Panda • QuantumGhost Pvt Ltd • 2026</p>
   </footer>
 
   <script>
     let currentState = "Odisha";
-    let apiKey = "AIzaSyDAeMxsKw2GQWaE3tGITfwH3xTgpPvJEVk";
+    let apiKey = "AIzaSyDZB9GmtuKcul0oBnNC6mEO-w4veYfU0Wo";
+
+    const t = {
+      hi: { nav:"Adhikar AI", main:"Adhikar AI - India's AI Rights Guardian", sub:"School fees, RTE, NHRC complaint – sab 2 minute mein. Har state ke liye!", about:"Hamara Mission", about1:"Adhikar AI Bharat ke har nagrik ke liye bana hai.", about2:"Inspired by <span class='font-bold text-orange-400'>Shri Manoj Jena</span> (HRF India & NHRC Core Group)", ceo:"Founder & CEO", features:"Powerful Features", demo:"Real Gemini AI Try Karo!", contact:"Humse Baat Karo", demoState:"Selected for: " },
+      en: { nav:"Adhikar AI", main:"Adhikar AI - India's AI Rights Guardian", sub:"School fees, RTE, NHRC complaint – all in 2 minutes. For every state!", about:"Our Mission", about1:"Adhikar AI is made for every citizen of India.", about2:"Inspired by <span class='font-bold text-orange-400'>Shri Manoj Jena</span> (HRF India & NHRC Core Group)", ceo:"Founder & CEO", features:"Powerful Features", demo:"Real Gemini AI Try Now!", contact:"Contact Us", demoState:"Selected for: " },
+      od: { nav:"ଅଧିକାର AI", main:"ଅଧିକାର AI - ଭାରତର AI ହକ ରକ୍ଷକ", sub:"ସ୍କୁଲ ଫିଜ୍, RTE, NHRC ଅଭିଯୋଗ – ସବୁ ୨ ମିନିଟରେ। ପ୍ରତ୍ୟେକ ରାଜ୍ୟ ପାଇଁ!", about:"ଆମର ମିଶନ", about1:"ଅଧିକାର AI ଭାରତର ପ୍ରତ୍ୟେକ ନାଗରିକ ପାଇଁ ତିଆରି ହୋଇଛି।", about2:"Inspired by <span class='font-bold text-orange-400'>Shri Manoj Jena</span> (HRF India & NHRC)", ceo:"ଫାଉଣ୍ଡର ଓ CEO", features:"ଶକ୍ତିଶାଳୀ ଫିଚର୍ସ", demo:"Real Gemini AI ଚେଷ୍ଟା କରନ୍ତୁ!", contact:"ଆମ ସହ କଥା ହେବା", demoState:"Selected for: " }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById('langSelect').value;
+      const tr = t[lang];
+      document.getElementById('navTitle').innerText = tr.nav;
+      document.getElementById('mainTitle').innerText = tr.main;
+      document.getElementById('subtitle').innerText = tr.sub;
+      document.getElementById('aboutTitle').innerText = tr.about;
+      document.getElementById('aboutText1').innerText = tr.about1;
+      document.getElementById('aboutText2').innerHTML = tr.about2;
+      document.getElementById('ceoTitle').innerText = tr.ceo;
+      document.getElementById('featuresTitle').innerText = tr.features;
+      document.getElementById('demoTitle').innerText = tr.demo;
+      document.getElementById('contactTitle').innerText = tr.contact;
+      document.getElementById('demoState').innerText = tr.demoState + currentState;
+    }
 
     function changeState() {
       currentState = document.getElementById('stateSelect').value;
-      document.getElementById('mainTitle').innerHTML = `Adhikar AI - ${currentState} & India's AI Rights Guardian`;
-      document.getElementById('demoState').innerText = `Selected for: ${currentState}`;
+      document.getElementById('demoState').innerText = t[document.getElementById('langSelect').value].demoState + currentState;
     }
 
     async function sendMessage() {
@@ -157,4 +185,4 @@
     };
   </script>
 </body>
-    </html>
+</html>
