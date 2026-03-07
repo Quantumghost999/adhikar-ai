@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adhikar AI - India's AI Rights Guardian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #1e3a8a, #f59e0b); }
+    .chat-box { height: 420px; overflow-y: auto; }
+  </style>
+</head>
+<body class="bg-slate-950 text-white">
+
+  <nav class="sticky top-0 bg-slate-900 border-b border-slate-700 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-scale-balanced text-3xl text-orange-500"></i>
+        <h1 class="text-2xl font-bold">Adhikar AI</h1>
+      </div>
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#home" class="hover:text-orange-400 transition">Home</a>
+        <a href="#about" class="hover:text-orange-400 transition">About</a>
+        <a href="#features" class="hover:text-orange-400 transition">Features</a>
+        <a href="#demo" class="hover:text-orange-400 transition">Try AI</a>
+        <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+      </div>
+      <a href="#" onclick="alert('App coming soon on Play Store!')" class="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold">Install App</a>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-bg py-24 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 id="mainTitle" class="text-5xl md:text-6xl font-bold leading-tight">Adhikar AI - India's AI Rights Guardian</h2>
+      <p id="subtitle" class="mt-6 text-xl text-slate-200">School fees, RTE, NHRC complaint – sab 2 minute mein. Har state ke liye!</p>
+      <div class="mt-8 flex justify-center gap-4">
+        <select id="stateSelect" onchange="changeState()" class="bg-slate-800 text-white px-6 py-3 rounded-2xl text-lg border border-orange-500">
+          <option value="Odisha">Odisha</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="All India">All India</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-slate-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Hamara Mission</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg leading-relaxed">Adhikar AI Bharat ke har nagrik ke liye bana hai. Leading human rights defenders ke saath milkar yeh tool ready kiya gaya.</p>
+          <p class="mt-6 text-lg leading-relaxed">Inspired by <span class="font-bold text-orange-400">Shri Manoj Jena</span> (Chairperson, Human Rights Front HRF India & NHRC Core Group Member)</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl text-center">
+          <img src="https://i.ibb.co/0jZfK9k/manoj-jena.jpg" alt="Shri Manoj Jena" class="w-64 mx-auto rounded-2xl shadow-xl border-4 border-orange-500">
+          <p class="mt-4 font-bold text-orange-400">Shri Manoj Jena</p>
+          <p class="text-sm text-slate-400">Chairperson, Human Rights Front (HRF) India</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-6">Founder & CEO</h3>
+          <p class="text-3xl font-bold text-orange-400">Mr. Nrusingha Charan Panda</p>
+          <p class="mt-2 text-slate-300">QuantumGhost Pvt Ltd</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-20 bg-slate-950">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-12">Powerful Features</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 p-8 rounded-3xl">Instant Petition Draft</div>
+        <div class="bg-slate-900 p-8 rounded-3xl">Smart Gemini AI Chatbot</div>
+        <div class="bg-slate-900 p-8 rounded-3xl">Auto NHRC Follow-up</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="py-20 bg-slate-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-4">Real Gemini AI Try Karo!</h2>
+      <p id="demoState" class="text-orange-400 text-xl mb-6">Selected for: Odisha</p>
+      <div class="bg-slate-950 border border-slate-700 rounded-3xl p-6 shadow-2xl">
+        <div id="chat" class="chat-box bg-slate-900 p-6 rounded-2xl text-left mb-6"></div>
+        <div class="flex gap-3">
+          <input id="userInput" type="text" placeholder="Apni problem batao..." class="flex-1 bg-slate-800 text-white px-6 py-4 rounded-2xl">
+          <button onclick="sendMessage()" class="bg-orange-500 hover:bg-orange-600 px-10 py-4 rounded-2xl font-bold">Bhejo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-slate-950">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Humse Baat Karo</h2>
+      <form action="https://formspree.io/f/your-email" method="POST" class="space-y-6">
+        <input type="text" name="name" placeholder="Naam" required class="w-full bg-slate-900 border border-slate-700 px-6 py-4 rounded-2xl">
+        <input type="email" name="email" placeholder="Email ya Phone" required class="w-full bg-slate-900 border border-slate-700 px-6 py-4 rounded-2xl">
+        <textarea name="message" rows="5" placeholder="Message" required class="w-full bg-slate-900 border border-slate-700 px-6 py-4 rounded-2xl"></textarea>
+        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 py-5 rounded-2xl text-xl font-bold">Message Bhejo</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-black py-8 text-center text-slate-500">
+    <p>Made with ❤️ for Bharat • Founder & CEO: Mr. Nrusingha Charan Panda • QuantumGhost Pvt Ltd • 2026</p>
+  </footer>
+
+  <script>
+    let currentState = "Odisha";
+    let apiKey = "AIzaSyDAeMxsKw2GQWaE3tGITfwH3xTgpPvJEVk";
+
+    function changeState() {
+      currentState = document.getElementById('stateSelect').value;
+      document.getElementById('mainTitle').innerHTML = `Adhikar AI - ${currentState} & India's AI Rights Guardian`;
+      document.getElementById('demoState').innerText = `Selected for: ${currentState}`;
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById('userInput');
+      const text = input.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      input.value = '';
+      addMessage("Thinking...", 'bot');
+
+      const prompt = `You are an expert human rights AI for India. User question: "${text}". Current state: ${currentState}. Give short, helpful and petition-ready answer in Hindi.`;
+
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+      });
+
+      const data = await response.json();
+      const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Koi issue hai, thoda baad mein try karo.";
+      document.querySelector('#chat div:last-child').remove();
+      addMessage(reply, 'bot');
+    }
+
+    function addMessage(text, type) {
+      const chat = document.getElementById('chat');
+      const div = document.createElement('div');
+      div.className = `p-4 rounded-2xl max-w-[85%] mb-4 ${type === 'user' ? 'bg-orange-600 ml-auto text-right' : 'bg-slate-800'}`;
+      div.innerHTML = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    window.onload = () => {
+      addMessage("Namaskar! Main <b>Adhikar AI</b> (QuantumGhost Pvt Ltd) hoon.<br>Bharat ke har haq ke liye bana hoon. Kya problem hai?", 'bot');
+    };
+  </script>
+</body>
+    </html>
