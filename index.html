@@ -10,8 +10,8 @@
     body { font-family: 'Segoe UI', sans-serif; }
     .hero-bg { background: linear-gradient(135deg, #0f172a, #14b8a6); }
     .chat-box { height: 420px; overflow-y: auto; }
-    h1, h2, h3 { font-size: 2.8rem; line-height: 1.1; }
-    p { font-size: 1.15rem; line-height: 1.7; }
+    h1, h2, h3 { font-size: 2.75rem; line-height: 1.15; font-weight: 700; }
+    p { font-size: 1.18rem; line-height: 1.75; }
   </style>
 </head>
 <body class="bg-slate-950 text-white">
@@ -49,9 +49,12 @@
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div>
           <p class="text-xl leading-relaxed">Adhikar AI Bharat ke har nagrik ke liye bana hai. AI ke through hum human rights ko asaan aur tez bana rahe hain.</p>
-          <p class="mt-8 text-xl leading-relaxed">We are deeply inspired by the tireless work of <span class="font-bold text-teal-400">Shri Manoj Jena</span>, Chairperson of Human Rights Front (HRF) India and NHRC Core Group Member. His groundbreaking petitions and advocacy have helped thousands.</p>
-          <p class="mt-8 text-xl leading-relaxed">We are also associated with <span class="font-bold text-teal-400">BIKALP Foundation</span> for education, skill development and social welfare initiatives across Odisha and India.</p>
+          
+          <p class="mt-8 text-xl leading-relaxed">We are deeply inspired by the tireless work of <span class="font-bold text-teal-400">Shri Manoj Jena</span>, Chairperson of Human Rights Front (HRF) India and NHRC Core Group Member. His groundbreaking petitions on custodial deaths, RTE violations and transgender rights have helped thousands across Odisha and India.</p>
+          
+          <p class="mt-8 text-xl leading-relaxed">We are also proudly associated with <span class="font-bold text-teal-400">BIKALP Foundation</span>, a Bhubaneswar-based trust founded by Dr. Bhagban Prakash. BIKALP works on education, Right to Education (RTE), skill development, women empowerment and social welfare initiatives across Odisha.</p>
         </div>
+        
         <div class="bg-slate-800 p-8 rounded-3xl text-center">
           <img src="https://i.ibb.co/5Y7vK8Q/manoj-jena-official.jpg" alt="Shri Manoj Jena" class="w-80 mx-auto rounded-3xl shadow-2xl border-4 border-teal-400">
           <p class="mt-6 text-2xl font-bold text-teal-400">Shri Manoj Jena</p>
@@ -85,12 +88,11 @@
     let currentState = "Odisha";
     let apiKey = "AIzaSyDAeMxsKw2GQWaE3tGITfwH3xTgpPvJEVk"; // ← yahan naya key daal dena
 
-    // Language, State aur AI Chat code same as before (working)
-    // (Pura script same rakha hai taaki chat chalega)
+    // Language, State aur AI Chat code same (working)
 
     window.onload = () => {
       addMessage("Namaskar! Main <b>Adhikar AI</b> hoon.<br>Bharat ke har haq ke liye bana hoon. Kya problem hai?", 'bot');
     };
   </script>
 </body>
-          </html>
+</html>
